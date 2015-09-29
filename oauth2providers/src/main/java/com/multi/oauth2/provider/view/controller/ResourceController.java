@@ -13,7 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.multi.oauth2.provider.dao.OAuth2DAO;
+import com.multi.oauth2.provider.dao.OAuth2HDAO;
 import com.multi.oauth2.provider.vo.ClientVO;
 import com.multi.oauth2.provider.vo.TokenVO;
 import com.multi.oauth2.provider.vo.UserVO;
@@ -26,7 +26,7 @@ import com.multi.oauth2.provider.vo.UserVO;
 public class ResourceController {
 
 	@Autowired
-	private OAuth2DAO dao;
+	private OAuth2HDAO dao;
 
 	@RequestMapping(value = "resource/myinfo.do", method = RequestMethod.GET)
 	public String getMyInfo(Model model, HttpServletRequest request) throws OAuth2Exception {

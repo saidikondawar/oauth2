@@ -13,14 +13,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-import com.multi.oauth2.provider.dao.OAuth2DAO;
+import com.multi.oauth2.provider.dao.OAuth2HDAO;
 import com.multi.oauth2.provider.vo.TokenVO;
 
 @Controller
 public class OAuth2Interceptor extends HandlerInterceptorAdapter {
 
 	@Autowired
-	private OAuth2DAO dao;
+	private OAuth2HDAO dao;
 
 	@Autowired
 	private OAuth2AccessTokenService tokenService;

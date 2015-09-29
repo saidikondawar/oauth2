@@ -22,7 +22,7 @@ public class OAuth2ClientUtil {
 
 	static {
 		mapper = new ObjectMapper();
-		// 1.9.x 버전 이상
+		// 
 		mapper.setSerializationInclusion(Inclusion.NON_NULL);
 		mapper.setSerializationInclusion(Inclusion.NON_EMPTY);
 	}
@@ -138,8 +138,8 @@ public class OAuth2ClientUtil {
 	}
 
 	
-	// 용도 : GET 방식으로 access token을 요청할 때 사용
-	// grant_type이 password인 경우(Password Credential 방식인 경우 Access Token 요청할 때)
+	// GET access token
+	// grant_type password(Password Credential  Access Token)
 	//
 	// Authorization : Basic XXXXXXXXXX
 	public static String generateBasicAuthHeaderString(String client_id, String client_secret) {

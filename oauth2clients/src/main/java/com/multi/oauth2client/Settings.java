@@ -8,11 +8,11 @@ import java.util.HashMap;
 public class Settings {
 	public static final String CLIENT_ID = "ea90fc1d-9f5b-420f-aa27-a958dc3aedc5";
 	public static final String CLIENT_KEY = "90558ea921fbe151563ce21329867a47be654273";
-	public static final String AUTHORIZE_URL="http://localhost:8000/oauth2provider/oauth2/auth";
-	public static final String ACCES_TOKEN_URL = "http://localhost:8000/oauth2provider/oauth2/token";
+	public static final String AUTHORIZE_URL="http://localhost:8080/oauth2provider/oauth2/auth";
+	public static final String ACCES_TOKEN_URL = "http://localhost:8080/oauth2provider/oauth2/token";
 	public static final String RESPONSE_TYPE = "code";
-	public static final String REDIRECT_URI = "http://localhost:8000/oauth2client/callback.jsp";
-	public static final String PERSONAL_INFO_URL = "http://localhost:8000/oauth2provider/resource/myinfo.do";
+	public static final String REDIRECT_URI = "http://localhost:8080/oauth2client/callback.jsp";
+	public static final String PERSONAL_INFO_URL = "http://localhost:8080/oauth2provider/resource/myinfo.do";
 	public static final String SCOPE = "reademail,sendemail,readboard,calendar,personalinfo";
 
 	public static String getParamString(HashMap<String,String> map, boolean useAuthHeader) throws Exception {

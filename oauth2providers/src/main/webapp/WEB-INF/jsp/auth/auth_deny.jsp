@@ -16,9 +16,9 @@ window.onload = function() {
 </script>
 </head>
 <body>
-<h1>사용자가 클라이언트의 접근을 승인하지 않았습니다</h1>
+<h1>The user has not authorized the access of client</h1>
 <br><br>
-본서비스의 메인 페이지로 이동하시려면 아래버튼을 클릭하세요.<br><br>
-<button id="gomain">메인페이지로</button> 
+To go to the main page of this service, please click on the button below.<br><br>
+<button id="gomain">To main page</button> 
 </body>
 </html>

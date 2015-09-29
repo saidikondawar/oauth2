@@ -9,7 +9,7 @@ import net.oauth.v2.OAuth2Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.multi.oauth2.provider.dao.OAuth2DAO;
+import com.multi.oauth2.provider.dao.OAuth2HDAO;
 import com.multi.oauth2.provider.vo.ClientVO;
 import com.multi.oauth2.provider.vo.TokenVO;
 import com.multi.oauth2.provider.vo.UserVO;
@@ -18,7 +18,7 @@ import com.multi.oauth2.provider.vo.UserVO;
 public class OAuth2AccessTokenService {
 
 	@Autowired
-	private OAuth2DAO dao = new OAuth2DAO();
+	private OAuth2HDAO dao;
 
 	public String encrypt(String message) throws Exception {
 

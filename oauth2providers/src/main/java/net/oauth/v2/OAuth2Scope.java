@@ -30,13 +30,13 @@ public class OAuth2Scope {
 		
 		scopeUrlMap.put("GET /resource/myinfo.do", SCOPE_PERSONAL_INFO);
 		scopeUrlMap.put("GET /resource2/boardlist.do", SCOPE_READ_BOARD);
-
-		scopeMsgMap.put(SCOPE_READ_EMAIL, "�� ������ ���� �� �ֽ��ϴ�.");
-		scopeMsgMap.put(SCOPE_SEND_EMAIL, "�� ������ �ۼ��Ͽ� ������ �� �ֽ��ϴ�.");
-		scopeMsgMap.put(SCOPE_WRITE_BOARD, "�Խ��ǿ� ���� �ۼ��� �� �ֽ��ϴ�.");
-		scopeMsgMap.put(SCOPE_READ_BOARD, "�Խ����� ���� ���� �� �ֽ��ϴ�.");
-		scopeMsgMap.put(SCOPE_PERSONAL_INFO, "����� ���� ������ �� �� �ֽ��ϴ�.");
-		scopeMsgMap.put(SCOPE_CALENDAR, "Ķ���� ����� ����� �� �ֽ��ϴ�.");
+//		reademail,sendemail,readboard,calendar,personalinfo
+		scopeMsgMap.put(SCOPE_READ_EMAIL, "reademail");
+		scopeMsgMap.put(SCOPE_SEND_EMAIL, "sendemail");
+		scopeMsgMap.put(SCOPE_WRITE_BOARD, "writeboard");
+		scopeMsgMap.put(SCOPE_READ_BOARD, "readboard");
+		scopeMsgMap.put(SCOPE_PERSONAL_INFO, "personalinfo");
+		scopeMsgMap.put(SCOPE_CALENDAR, "calendar");
 
 	}
 	

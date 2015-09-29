@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.multi.oauth2.provider.dao.OAuth2DAO;
+import com.multi.oauth2.provider.dao.OAuth2HDAO;
 import com.multi.oauth2.provider.vo.UserVO;
 import javax.servlet.http.HttpSession;
 
@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 public class LoginController {
 
 	@Autowired
-	private OAuth2DAO dao;
+	private OAuth2HDAO dao;
 	
 	@RequestMapping(value="login.do", method=RequestMethod.GET)
 	public String login() {

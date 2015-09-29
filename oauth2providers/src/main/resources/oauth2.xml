@@ -8,7 +8,7 @@
 	<typeAlias alias="tokenVO" type="com.multi.oauth2.provider.vo.TokenVO" />
 	<typeAlias alias="userVO" type="com.multi.oauth2.provider.vo.UserVO" />
 
-	<!--  Login을 위한 Map 시작 -->
+	<!--   Map start for Login -->
 	<select id="login" resultClass="userVO" parameterClass="userVO">
 		SELECT userid, username, userno
 		FROM tbl_users

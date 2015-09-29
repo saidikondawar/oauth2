@@ -7,7 +7,7 @@
 	boolean isloggined = (Boolean)request.getAttribute("isloginned");
 	RequestAuthVO rVO = (RequestAuthVO)request.getAttribute("requestAuthVO");
 	ClientVO cVO = (ClientVO)request.getAttribute("clientVO");
-	//csv를 배열로...
+	//csv to an array
 	String[] scopes = rVO.getScope().split(",");
 	String currentUrl = "auth?" + request.getQueryString();
 %>
@@ -28,28 +28,28 @@ function deny() {
 </script>
 </head>
 <body>
-	<h1>Consumer 승인 페이지</h1>
+	<h1>Consumer </h1>
 	<hr>
-		<b>승인하려는 클라이언트 : <%=cVO.getClient_name() %></b>
+		<b>Client Name : <%=cVO.getClient_name() %></b>
 	<hr>
-	<h3>사용하려는 권한</h3>
+	<h3>Scopes :</h3>
 	<ul>
 <% for (int i=0; i < scopes.length; i++) { %>
 		<li><%=OAuth2Scope.getScopeMsg(scopes[i]) %></li>		
 <% } %>
 	</ul>
-	<h1>위 권한을 승인하시겠습니까?</h1>
+	<h1>Are you sure you want to approve the above rights?</h1>
 	<hr>
 	<form id="f1" method="post" action="<%=currentUrl %>">
 		<input type="hidden" id="isallow" name="isallow" value="true" />
 <% if (!isloggined) { 	%>
-		계정 : <input type="text" id="userid" name="userid" /><br>
-		암호 : <input type="text" id="password" name="password" /><br>
+		User Name : <input type="text" id="userid" name="userid" /><br>
+		Password : <input type="text" id="password" name="password" /><br>
 <% } else { %>
-		<h3>이미 로그인하셨습니다. 승인하시겠습니까?</h3>
+		<h3>Allow User?</h3>
 <% } %>
-		<input type="button" value="승인" onclick="allow()" />
-		<input type="button" value="거부" onclick="deny()" />
+		<input type="button" value="Allow" onclick="allow()" />
+		<input type="button" value="Deny" onclick="deny()" />
 	</form>
 </body>
 </html>

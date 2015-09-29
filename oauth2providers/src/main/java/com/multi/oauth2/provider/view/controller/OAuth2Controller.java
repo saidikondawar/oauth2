@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.multi.oauth2.provider.dao.OAuth2DAO;
+import com.multi.oauth2.provider.dao.OAuth2HDAO;
 import com.multi.oauth2.provider.util.OAuth2AccessTokenService;
 import com.multi.oauth2.provider.vo.ClientVO;
 import com.multi.oauth2.provider.vo.TokenVO;
@@ -30,7 +30,7 @@ import com.multi.oauth2.provider.vo.UserVO;
 public class OAuth2Controller {
 
 	@Autowired
-	private OAuth2DAO dao;
+	private OAuth2HDAO dao;
 
 	@Autowired
 	private OAuth2AccessTokenService tokenService;
@@ -46,7 +46,7 @@ public class OAuth2Controller {
 			tVO.setToken_type(OAuth2Constant.TOKEN_TYPE_BEARER);
 			tVO.setScope(rVO.getScope());
 
-			// expires_in�� refresh_token�� ��� ���δ� �� ������ �����Ѵ�.
+			// expires_in refresh_token
 			tVO.setExpires_in(OAuth2Constant.EXPIRES_IN_VALUE);
 			tVO.setRefresh_token(OAuth2Util.generateToken());
 			tVO.setCode(OAuth2Util.generateToken());

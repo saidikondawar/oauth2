@@ -11,6 +11,11 @@
 			<version>1.9.1</version>
 		</dependency>
 		<dependency>
+			<groupId>com.sun.xml.security</groupId>
+			<artifactId>xml-security-impl</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
 			<version>3.0-alpha-1</version>
@@ -40,7 +45,7 @@
 
 
 	<build>
-		<finalName>oauth2clients</finalName>
+		<finalName>oauth2client</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
